@@ -5,9 +5,10 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contacts";
 import Skills from "./pages/Skills";
+import Error from "./pages/Error"
 import WavyBackground from "./pages/WavyBackground";
 import './App.css'
-import Hero from "./Hero";
+
 
 const { Header, Content, Footer } = Layout;
 
@@ -57,6 +58,7 @@ const App = () => {
             <Route path="/projects" element={<Projects />} />
             <Route path="/skills" element={<Skills />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<Error/>}/>
           </Routes>
         </Content>
         <Footer style={{ textAlign: "center", background: "#f0f2f5" }}>
