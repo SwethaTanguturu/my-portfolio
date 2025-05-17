@@ -5,6 +5,7 @@ import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
+  const [form ]= Form.useForm();
 
   const onFinish = (values) => {
     setLoading(true);
@@ -16,14 +17,15 @@ const Contact = () => {
     };
 
     emailjs.send(
-      "service_7qruins",    // Replace with your EmailJS Service ID
-      "template_gsjzo87",   // Replace with your EmailJS Template ID
+      "service_7qruins",    
+      "template_gsjzo87",   
       templateParams,
-      "-awx1MlMNYs7E6cni"     // Replace with your EmailJS Public Key
+      "-awx1MlMNYs7E6cni"     
     )
     .then((response) => {
       console.log('Success', response);
       message.success("Message sent successfully!");
+      form.resetFields();
       setLoading(false);
     })
     .catch((error) => {
@@ -42,7 +44,7 @@ const Contact = () => {
     >
       <Card style={{ width: 400 }}>
         <h2>Contact Me</h2>
-        <Form layout="vertical" onFinish={onFinish}>
+        <Form form={form} layout="vertical" onFinish={onFinish}>
           <Form.Item label="Name" name="name" rules={[{ required: true, message: "Please enter your name!" }]}>
             <Input />
           </Form.Item>

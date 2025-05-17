@@ -15,7 +15,6 @@ const Home = () => {
       {/* Profile Card */}
       <Card
         style={{
-          width: 400,
           padding: "20px",
           boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
           borderRadius: "10px",
@@ -24,24 +23,28 @@ const Home = () => {
         {/* Profile Avatar */}
         <Avatar
           size={100}
-          src={profile} 
+          src={profile}
           style={{ marginBottom: 20 }}
         />
 
         {/* Name & Title */}
         <h1 style={{ marginBottom: "10px" }}>Swetha Tanguturu</h1>
         <p style={{ fontSize: "16px", color: "#666" }}>
-          Full-Stack Developer | React.js | Node.js | UI/UX
+          Full-Stack Developer | React.js | Node.js | AWS | UI/UX
         </p>
+        <p>I am a passionate Full-Stack Developer with over 6 years of experience crafting scalable, user-centric web applications. I specialize in React.js and Node.js, with a strong foundation in Spring Boot, AWS, and modern front-end architecture.
 
-        {/* Call-to-Action */}
+          I love building clean, accessible, and performant interfaces that not only work beautifully but also solve real problems. Whether it's engineering secure APIs, integrating cloud solutions, or optimizing UI/UX, I thrive at the intersection of design and technology.
+
+          I'm someone who enjoys collaboration, values clean code, and always stays curious. Let's build something impactful together!</p>
+
         <Button
           type="primary"
           size="large"
           style={{ marginTop: "15px", borderRadius: "5px" }}
-          href="/projects"
+          href="/#/projects"
         >
-          View My Work 
+          View My Work
         </Button>
 
         {/* Social Media Icons */}
